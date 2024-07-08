@@ -1,0 +1,493 @@
+@charset "utf-8";
+
+
+/* ================ 全体設定 ================ */
+:root {
+    --color-base: #ddebf0;
+    --color-sub: #b8d9e5;
+    --color-accent: #654e40;
+    --color-accent-rgb: 101,78,64;
+    --font-base: #333;
+    --yuugo-font-set: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+    --gill-sans-font-set: "Gill Sans MT", sans-serif;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-base);
+    font-family: var(--yuugo-font-set);
+    font-size: clamp(16px, 1.8vw, 30px);
+    color: var(--font-base);
+    line-height: 1.7rem;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.wrapper {
+    padding: 30px 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+li {
+    list-style: none;
+}
+
+.viewmore {
+    font-family: var(--gill-sans-font-set);
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.viewmore-a {
+    background-color: var(--color-base);
+    border: 1px solid var(--font-base);
+    border-radius: 18px;
+    padding: 0.2rem 1rem;
+}
+
+.transition {
+    transition: 0.5s
+}
+
+/* ================ top ================ */
+#top {
+    height: 200vh;
+    position: relative;
+    z-index: 1;
+}
+
+/* ================ header ================ */
+
+#header-area {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    padding: 20px;
+    z-index: 99;
+}
+
+h1 img {
+    height: 34px;
+    display: inline-block;
+}
+
+#header-right {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+#login {
+    border: 1px solid var(--font-base);
+    border-radius: 18px;
+    font-size: 13px;
+    display: flex;
+}
+
+#login a {
+    padding: 0 1em;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+#svg {
+    height: 1em;
+    width: auto;
+    fill: var(--font-base);
+}
+
+/* ハンバーガーメニュー */
+.hamburger {
+    display: block;
+    width: 30px;
+    height: 15px;
+    position: relative;
+}
+
+.hamburger span {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: var(--font-base);
+    transition: .5s; /* ゆっくり */
+}
+
+.hamburger span:first-of-type {
+    /* ハンバーガーメニューの1番目の線 */
+    top: 0;
+}
+
+.hamburger span:nth-of-type(2) {
+    /* ハンバーガーメニューの2番目の線 */
+    top: 50%;
+}
+
+.hamburger span:last-of-type {
+    /* ハンバーガーメニューの3番目の線 */
+    top: 100%;
+}
+
+.slide-menu {
+    background-color: rgba(var(--color-accent-rgb), .9);
+    position: fixed;
+    top: 65px;
+    width: 100%;
+    left: 0;
+    transform: translateX(100%); /* 右にずらす */
+    transition: .5s; /* ゆっくり */
+}
+
+.slide-menu li {
+    color: #fff;
+    line-height: 400%;
+    text-align: center;
+}
+
+
+/* アクティブ時の挙動 */
+.hamburger.active span:first-of-type{/* ハンバーガーメニューの1番目の線 */
+    top: 50%;
+    transform: rotate(45deg);
+  }
+  .hamburger.active span:nth-of-type(2){/* ハンバーガーメニューの2番目の線 */
+    opacity: 0;
+  }
+  .hamburger.active span:last-of-type{/* ハンバーガーメニューの3番目の線 */
+    top: 50%;
+    transform: rotate(-45deg);
+  }
+  .slide-menu.active{
+    transform: translateX(0); 
+  }
+
+#pc-menu {
+    display: none;
+}
+
+
+/* ================ top-img ================ */
+#top-img {
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    z-index: -1;
+}
+
+#top-img img {
+    height: 100vh;
+    object-fit: cover;
+    object-position: 32% 100%;
+    overflow: hidden;
+}
+
+/* ================ info ================ */
+#info {
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    opacity: 0;
+}
+
+#info div {
+    position: relative;
+    z-index: 5;
+}
+
+#info::before {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100vh;
+    top: 100vh;
+    left: 0;
+    background-color: #fff;
+    opacity: 0.6;
+
+}
+
+#info p:first-child {
+    font-size: 22px;
+    margin-bottom: 1em;
+}
+
+
+/* ================ products ================ */
+#products li {
+    background-repeat: no-repeat;
+    background-position: center bottom 50px;
+    background-size: auto 150px;
+}
+
+#products li+li {
+    padding-top: 40px;
+}
+
+#products li:first-child {
+    background-image: url(../img/soil.svg);
+}
+
+#products li:nth-child(2) {
+    background-image: url(../img/water.svg);
+}
+
+#products li:last-child {
+    background-image: url(../img/wind.svg);
+}
+
+#products img {
+    border-radius: 30px;
+    height: calc(100vw - 40px);
+    object-fit: cover;
+}
+
+#products p:first-of-type {
+    margin: 1rem 0;
+}
+
+/* ================ qa ================ */
+#qa {
+    background-color: var(--color-sub);
+}
+
+.qa-li {
+    background-color: var(--color-base);
+    padding: 1rem 1.5rem;
+    margin-top: 30px;
+    border-radius: 49px;
+}
+
+.qa-q::before {
+    content: "Q";
+    font-size: 24px;
+}
+
+.qa-q {
+    font-weight: bold;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+
+/* ================ news ================ */
+#news .news-contents {
+    border-bottom: 1px solid var(--font-base);
+    padding-bottom: 15px;
+}
+
+#news .news-contents+.news-contents {
+    padding-top: 15px;
+}
+
+
+/* ================ footer ================ */
+#footer {
+    background-color: var(--color-accent);
+    color: #fff;
+    font-size: 0.7rem;
+    text-align: center;
+}
+
+#footer ul {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+
+
+
+/* ============================ PC版 ============================ */
+@media screen and (min-width:391px){
+
+/* ================ 全体設定 ================ */
+body {
+    font-size: 1.5rem;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+.viewmore {
+    justify-content: right;
+}
+
+.viewmore-a:hover {
+    background-color: var(--color-accent);
+    color: #fff;
+    border-color: var(--color-accent);
+    /* transition: 0.5s; */
+}
+
+.wrapper {
+    padding: calc(100vh / 20) calc(100vw / 10);
+    margin: 4rem 0;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+/* ================ top ================ */
+
+
+/* ================ header ================ */
+
+#header-area {
+    padding: calc(100vh / 20) calc(100vw / 10);
+}
+
+h1 img {
+    height: 48px;
+}
+
+#header-right {
+    flex-flow: row-reverse;
+    font-size: 1.2rem;
+}
+
+#login {
+    font-size: 1.2rem;
+    height: 38px;
+}
+
+#login:hover {
+    background-color: var(--color-accent);
+    color: #fff;
+    border-color: var(--color-accent);
+}
+
+#login a:hover #svg {
+    fill: #fff;
+}
+
+.hamburger {
+    display: none;
+}
+
+#pc-menu {
+    display: block;
+}
+
+#pc-menu ul {
+    display: flex;
+    gap: 1.5rem;
+}
+
+/* ================ top-img ================ */
+
+/* ================ info ================ */
+#info {
+    line-height: 2;
+}
+
+#info p {
+    font-size: 1.2rem;
+}
+
+#info p:first-child {
+    font-size: 3rem;
+    margin-bottom: 1em;
+}
+
+/* ================ products ================ */
+#products li {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    gap: 3rem;
+    background-size: auto 400px;
+    background-position: center;
+}
+
+#products li:nth-child(2) {
+    flex-direction: row-reverse;
+    text-align: right;
+}
+
+#products li+li {
+    padding-top: 200px;
+}
+
+#products img {
+    border-radius: 0;
+    height: calc(100vh / 5 * 4);
+    width: calc(100vw / 4);
+}
+
+.products-right {
+    width: calc(100vw / 10 * 4);
+}
+
+#products p {
+    font-size: 1.2rem;
+
+}
+
+#products li:first-child .viewmore,
+#products li:last-child .viewmore {
+    justify-content: left;
+}
+
+/* ================ qa ================ */
+#qa {
+    font-size: 1rem;
+}
+
+#qa ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    flex: 1 1;
+    gap: 2rem;
+}
+
+.qa-li {
+    width: 48%;
+    margin-top: 0;
+}
+
+/* ================ news ================ */
+#news {
+    font-size: 1rem;
+}
+
+time {
+    font-size: 0.8rem;
+}
+
+/* ================ footer ================ */
+#footer {
+    margin: 0;
+}
+
+}
+
