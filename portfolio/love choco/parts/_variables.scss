@@ -1,0 +1,43 @@
+@charset 'utf-8';
+
+//変数
+
+//色
+$c-base: #17140F;
+$c-main: #212121;
+$c-accent: #442218;
+$c-white: #ffffff;
+
+
+//フォントのサイズ
+$fz-large: 40px;
+$fz-middle-large: 24px;
+$fz-small-large:18px;
+$fz-normal: 16px;
+$fz-small: 14px;
+
+// フォントの太さ
+$fw-bold: 700;
+$fw-medium: 500;
+$fw-regular: 400;
+$fw-light: 300;
+
+//フォント Montserrat Alternates
+@mixin mont($weight:$fw-bold) {
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: $weight;
+    font-size: $fz-large;
+}
+
+//レスポンシブ
+$breakpoints: (
+    "pc-big": "screen and (min-width: 1350px)",
+    "pc": "screen and (min-width: 960px)",
+    "tab": "screen and (min-width: 768px)",
+);
+
+@mixin media($breakpoint: tab) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}

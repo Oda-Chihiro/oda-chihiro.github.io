@@ -1,0 +1,163 @@
+@charset 'utf-8';
+
+@use "variables" as v;
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: v.$c-base;
+}
+
+.header-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    @include v.media{
+        padding: 15px 50px;
+    }
+}
+
+.hamburger-btn {
+    position: relative;
+    z-index: 9999;
+    width: 20px;
+    height: 15px;
+    cursor: pointer;
+    @include v.media{
+        width: 45px;
+        height: 24px;
+    }
+}
+
+.hamburger-btn span {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    transition: all .5s;
+}
+
+.hamburger-btn span:first-of-type {
+    top: 0;
+}
+
+.hamburger-btn span:nth-of-type(2) {
+    top: 50%;
+}
+
+.hamburger-btn span:last-of-type {
+    top: 100%;
+}
+
+// クリックされて×になる動き
+.hamburger-btn.active span:first-of-type {
+    top: 50%;
+    transform: rotate(45deg);
+}
+
+.hamburger-btn.active span:nth-of-type(2) {
+    opacity: 0;
+}
+
+.hamburger-btn.active span:last-of-type {
+    top: 50%;
+    transform: rotate(-45deg);
+}
+
+// ロゴ
+h1 {
+    width: 30px;
+    height: 30px;
+    @include v.media{
+        width: 50px;
+        height: 50px;
+    }
+}
+
+// アカウントアイコン
+.account-svg {
+    height: 20px;
+    @include v.media{
+        height: 35px;
+    }
+}
+
+// スライドメニュー
+.slide-menu {
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    background: v.$c-main;
+    overflow: hidden;
+    font-size: v.$fz-middle-large;
+    transform: translateX(-100%);
+    transition: .5s;
+    @include v.media{
+        width: 50%;
+    }
+}
+
+// クリックされた時のメニュー動作
+.slide-menu.active {
+    transform: translateX(0);
+    transition: .5s;
+}
+
+
+.slide-menu__lists {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    width: 100%;
+    height: 100%;
+    padding: 150px 0 0 50px;
+    @include v.media{
+        padding: 150px 0 0 120px;
+    }
+}
+
+.slide-menu__lists::before {
+    content: "";
+    position: absolute;
+    right: -20%;
+    bottom: -20%;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/logo.svg);
+    background-size: cover;
+    opacity: 0.05;
+}
+
+
+// ハンバーガーメニュークリック後背景暗くなる
+.overlay {
+    display: none;
+}
+
+.overlay.dark {
+    display: block;
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .7);
+    animation: overlay-dark .5s forwards;
+}
+
+@keyframes overlay-dark {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

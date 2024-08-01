@@ -1,0 +1,27 @@
+@charset 'utf-8';
+
+@use "variables" as v;
+
+body {
+    background-color: v.$c-base;
+    font-family: "Noto Sans JP", sans-serif;
+    color: v.$c-white;
+    text-transform: uppercase;
+    overflow-x: hidden;
+}
+
+img,
+svg {
+    width: 100%;
+    max-width: 100%;
+    vertical-align: top;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style-type: none;
+}

@@ -1,0 +1,103 @@
+@charset 'utf-8';
+
+@use "variables" as v;
+
+.footer {
+    padding: 30px 5% 20px;
+    background-color: v.$c-white;
+    color: v.$c-base;
+    @include v.media{
+        padding: 100px 10% 20px;
+    }
+}
+
+.footer__wrapper {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    @include v.media{
+        flex-flow: row wrap;
+    }
+    @include v.media(pc-big){
+        flex-wrap: nowrap;
+    }
+}
+
+// フッターの画像
+.footer svg path {
+    fill: v.$c-base;
+    transition: all .7s;
+}
+
+.footer__logo {
+    width: 126px;
+}
+
+// 中央の情報
+.footer__info {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    gap: 30px;
+    @include v.media{
+        height: 130px;
+    }
+}
+
+// 右のアイコン2つ
+.footer__customer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    width: 50%;
+    @include v.media(pc){
+        flex-direction: row;
+    }
+}
+
+.footer__customer__content {
+    border-radius: 30px;
+}
+
+.footer__customer__content a {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    border: 1px solid v.$c-base;
+    border-radius: 30px;
+    transition: all .7s;
+}
+
+.footer__customer__content:hover a {
+    background-color: v.$c-base;
+    color: v.$c-white;
+    transition: all .7s;
+}
+
+.footer__customer__content svg {
+    width: 33px;
+    height: auto;
+}
+
+.footer__customer__content:hover path {
+    fill: v.$c-white;
+    stroke: none;
+    transition: all .7s;
+}
+
+.footer__cart p {
+    text-indent: 1rem;
+}
+
+
+.copyright {
+    margin-top: 60px;
+    text-align: center;
+    font-size: v.$fz-small;
+}
