@@ -1,18 +1,501 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="robots" content="noindex,nofollow">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ポートフォリオを置くところ</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>小田千尋 Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-    <p>小田千尋のポートフォリオ置き場です。ここの改修はのちのち。</p>
-    <ul>
-        <li><a href="portfolio/kenkodo/index.html">健康堂（架空サイト）</a></li>
-        <li><a href="portfolio/chukyu2/index.html">ジムサイト（架空サイト）</a></li>
-        <li><a href="https://pc-hana.com/49/team-c/">カバン店WEBサイト（コンペ提出サイト）</a></li>
-        <li><a href="portfolio/lovechoco/index.html">チョコレート専門店（架空サイト）</a></li>
+
+<nav>
+  <div class="wrap">
+    <ul class="navlinks">
+      <li><a href="#works">WORKS</a></li>
+      <li><a href="#skills">SKILLS</a></li>
+      <li><a href="#about">ABOUT</a></li>
     </ul>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div>
+      <h1 class="hero-name">制作実績等</h1>
+      <p class="lede">Web制作会社にてコーダーとして約2年、60件以上の制作・保守案件に携わってきました。HTML/CSS/SCSSを軸に、WordPress構築からサーバー・ドメイン移管まで、公開後の運用まで見据えたコーディングを行っています。</p>
+    </div>
+    <div class="stat-panel">
+      <div class="stat-row"><span class="num">60+</span><span class="label">制作・保守案件数</span></div>
+      <div class="stat-row"><span class="num">2年</span><span class="label">コーダーとしての実務経験</span></div>
+      <div class="stat-row"><span class="num">全案件にて</span><span class="label">Git管理・レスポンシブ対応</span></div>
+    </div>
+  </div>
+</header>
+
+<section id="works">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>WORKS 〜実績〜</h2>
+      <span class="path mono">/works</span>
+    </div>
+    <p class="works-note">基本的に、全案件でHTML／CSS・SCSS、Gitを使用し、レスポンシブ対応を行っています（スマホ対応はほぼ必須。タブレット対応の有無は案件ごとに異なります）。<br>また、WordPress案件はいずれもオリジナルテーマの作成・編集です。</p>
+    <div class="works-grid">
+        <div class="work-card">
+            <h3>パセーラ</h3>
+            <dl class="meta-table">
+                <dt>URL</dt>
+                <dd>
+                    <a href="https://www.pacela.jp/#" target="_blank" rel="noopener">https://www.pacela.jp/</a>
+                </dd>
+                <dt>サイト規模</dt>
+                <dd>【◯ページ】</dd>
+                <dt>担当</dt>
+                <dd>一部コーディング（TOPページMAP、トピックスイベントページ、会員ページ、イベントスペース、その他）</dd>
+                <dt>制作期間</dt>
+                <dd>25年10月頃～26年7月頃</dd>
+                <dt>使用技術</dt>
+                <dd>WordPress（ACFによるCMS） / jQuery</dd>
+                <dt>制作区分</dt>
+                <dd>リニューアル</dd>
+                <dt>詳細</dt>
+                <dd>コーダー2名でのコーディング。シングルサイトとしての制作のみ行い、マルチサイト化等の後工程の作業は別会社とパセーラの情シスさんが行いました。<br>複数の代理店含め、多数の会社と連携しながら行っていきました。</dd>
+            </dl>
+            <div class="tag-row"><span class="tag">WordPress（【CMS名】）</span></div>
+        </div>
+
+        <div class="work-card">
+            <h3>松原組 yado</h3>
+            <dl class="meta-table">
+                <dt>URL</dt>
+                <dd>
+                    <a href="https://matsubara-yado.com/" target="_blank" rel="noopener">https://matsubara-yado.com/</a>
+                </dd>
+                <dt>サイト規模</dt>
+                <dd>LP</dd>
+                <dt>担当</dt>
+                <dd>コーディング</dd>
+                <dt>制作期間</dt>
+                <dd>1週間程度</dd>
+                <dt>使用技術</dt>
+                <dd>フォーム（）</dd>
+                <dt>制作区分</dt>
+                <dd>新規制作</dd>
+                <dt>詳細</dt>
+                <dd>ほぼバイブコーディングにて制作。jQueryを使用したアニメーションの実装なども素早くできますが、デザインと異なる仕様を実装することも多々あり、css自体も人の手が入ったものほど洗練されていない印象。指示の仕方を考える必要があると感じました。</dd>
+            </dl>
+        </div>
+
+      <div class="work-card">
+        <h3>某鋼材加工・販売会社</h3>
+        <dl class="meta-table">
+          <dt>サイト規模</dt><dd>【◯ページ】</dd>
+          <dt>担当</dt><dd>コーディング</dd>
+          <dt>制作期間</dt><dd>【期間】</dd>
+          <dt>制作区分</dt><dd>リニューアル</dd>
+        </dl>
+        <div class="tag-row"><span class="tag">WordPress（【CMS名】）</span></div>
+      </div>
+
+      <div class="work-card">
+        <h3>某法人運営の運動公園</h3>
+        <dl class="meta-table">
+          <dt>サイト規模</dt><dd>【◯ページ】</dd>
+          <dt>担当</dt><dd>【担当内容】</dd>
+          <dt>制作期間</dt><dd>【期間】</dd>
+          <dt>制作区分</dt><dd>【区分】</dd>
+        </dl>
+        <div class="tag-row"><span class="tag">WordPress</span></div>
+      </div>
+
+      <div class="work-card">
+        <h3>某雑貨販売・飲食事業などのグループ会社</h3>
+        <dl class="meta-table">
+          <dt>サイト規模</dt><dd>【◯ページ】</dd>
+          <dt>担当</dt><dd>【担当内容】</dd>
+          <dt>制作期間</dt><dd>【期間】</dd>
+          <dt>制作区分</dt><dd>新規制作</dd>
+        </dl>
+        <div class="tag-row"><span class="tag">WordPress</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>SKILLS 〜スキル〜</h2>
+      <span class="path mono">/skills</span>
+    </div>
+    <details class="legend">
+      <summary>評価基準について</summary>
+      <div class="legend-body">
+        <div class="legend-row"><span class="lv">5</span><span class="crit">要件・仕様を理解し、設計から実装・確認まで一通り自走できる</span></div>
+        <div class="legend-row"><span class="lv">4</span><span class="crit">一般的な案件で、指示を受けて一通り自走して実装できる</span></div>
+        <div class="legend-row"><span class="lv">3</span><span class="crit">実務で継続的に使用。既存コードや仕様を確認しながら実装できる</span></div>
+        <div class="legend-row"><span class="lv">2</span><span class="crit">使用経験あり。限定的な作業であれば対応できる</span></div>
+        <div class="legend-row"><span class="lv">1</span><span class="crit">触れた経験はあるが、現在は補助的な作業が中心</span></div>
+      </div>
+    </details>
+    <div class="skills-grid">
+
+      <div class="skill-group">
+        <h3>フロントエンド</h3>
+        <div class="skill-row">
+            <span class="name">HTML</span>
+            <span class="meter" aria-hidden="true">
+                <i class="on"></i>
+                <i class="on"></i>
+                <i class="on"></i>
+                <i class="on"></i>
+                <i class="on"></i>
+            </span>
+            <span class="lv mono">5/5</span>
+        </div>
+        <div class="skill-row">
+            <span class="name">CSS</span>
+            <span class="meter" aria-hidden="true">
+                <i class="on"></i>
+                <i class="on"></i>
+                <i class="on"></i>
+                <i class="on"></i>
+                <i class="on"></i>
+            </span>
+            <span class="lv mono">5/5</span>
+        </div>
+        <div class="skill-row">
+            <span class="name">SCSS</span>
+            <span class="meter" aria-hidden="true">
+                <i class="on"></i>
+                <i class="on"></i>
+                <i class="on"></i>
+                <i class="on"></i>
+                <i class="on"></i>
+            </span>
+            <span class="lv mono">5/5</span>
+        </div>
+        <div class="skill-row">
+            <span class="name">JavaScript</span>
+            <span class="meter" aria-hidden="true">
+                <i class="on"></i>
+                <i class="on"></i>
+                <i></i>
+                <i></i>
+                <i></i>
+            </span>
+            <span class="lv mono">2/5</span>
+        </div>
+        <div class="skill-row">
+            <span class="name">jQuery</span>
+            <span class="meter" aria-hidden="true">
+                <i class="on"></i>
+                <i class="on"></i>
+                <i></i>
+                <i></i>
+                <i></i>
+            </span>
+            <span class="lv mono">2/5</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <h3>CMS / EC</h3>
+        <div class="skill-row">
+            <span class="name">WordPress</span>
+            <span class="meter" aria-hidden="true">
+                <i class="on"></i>
+                <i class="on"></i>
+                <i class="on"></i>
+                <i class="on"></i>
+                <i></i>
+            </span>
+            <span class="lv mono">4/5</span>
+        </div>
+        <div class="skill-row">
+            <span class="name">EC-CUBE</span>
+            <span class="meter" aria-hidden="true">
+                <i class="on"></i>
+                <i class="on"></i>
+                <i></i>
+                <i></i>
+                <i></i>
+            </span>
+            <span class="lv mono">2/5</span>
+        </div>
+        <div class="skill-row">
+            <span class="name">スマレジECリピート</span>
+            <span class="meter" aria-hidden="true">
+                <i class="on"></i>
+                <i class="on"></i>
+                <i class="on"></i>
+                <i></i>
+                <i></i>
+            </span>
+            <span class="lv mono">3/5</span>
+        </div>
+        <div class="skill-row">
+            <span class="name">楽天RMS</span>
+            <span class="meter" aria-hidden="true">
+                <i class="on"></i>
+                <i class="on"></i>
+                <i class="on"></i>
+                <i class="on"></i>
+                <i></i>
+            </span>
+            <span class="lv mono">4/5</span>
+        </div>
+        <div class="skill-row">
+            <span class="name">Yahooビジネスマネージャー</span>
+            <span class="meter" aria-hidden="true">
+                <i class="on"></i>
+                <i class="on"></i>
+                <i class="on"></i>
+                <i></i>
+                <i></i>
+            </span>
+            <span class="lv mono">3/5</span>
+        </div>
+        <div class="skill-row">
+            <span class="name">Amazonセラーセントラル</span>
+            <span class="meter" aria-hidden="true">
+                <i class="on"></i>
+                <i class="on"></i>
+                <i class="on"></i>
+                <i></i>
+                <i></i>
+            </span>
+            <span class="lv mono">3/5</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <h3>ツール</h3>
+        <div class="skill-row">
+            <span class="name">Cursor</span>
+            <span class="meter" aria-hidden="true">
+                <i class="on"></i>
+                <i class="on"></i>
+                <i class="on"></i>
+                <i></i>
+                <i></i>
+            </span>
+            <span class="lv mono">3/5</span>
+        </div>
+        <div class="skill-row">
+            <span class="name">VSCode</span>
+            <span class="meter" aria-hidden="true">
+                <i class="on"></i>
+                <i class="on"></i>
+                <i class="on"></i>
+                <i></i>
+                <i></i>
+            </span>
+            <span class="lv mono">3/5</span>
+        </div>
+        <div class="skill-row">
+            <span class="name">Git</span>
+            <span class="meter" aria-hidden="true">
+                <i class="on"></i>
+                <i class="on"></i>
+                <i class="on"></i>
+                <i></i>
+                <i></i>
+            </span>
+            <span class="lv mono">3/5</span>
+        </div>
+        <div class="skill-row">
+            <span class="name">SourceTree</span>
+            <span class="meter" aria-hidden="true">
+                <i class="on"></i>
+                <i class="on"></i>
+                <i class="on"></i>
+                <i class="on"></i>
+                <i></i>
+            </span>
+            <span class="lv mono">4/5</span>
+        </div>
+        <div class="skill-row">
+            <span class="name">Beyond Compare</span>
+            <span class="meter" aria-hidden="true">
+                <i class="on"></i>
+                <i class="on"></i>
+                <i class="on"></i>
+                <i class="on"></i>
+                <i></i>
+            </span>
+            <span class="lv mono">4/5</span>
+        </div>
+        <div class="skill-row">
+            <span class="name">Gulp</span>
+            <span class="meter" aria-hidden="true">
+                <i class="on"></i>
+                <i class="on"></i>
+                <i></i>
+                <i></i>
+                <i></i>
+            </span>
+            <span class="lv mono">2/5</span>
+        </div>
+        <div class="skill-row">
+            <span class="name">Node.js</span>
+            <span class="meter" aria-hidden="true">
+                <i class="on"></i>
+                <i class="on"></i>
+                <i></i>
+                <i></i>
+                <i></i>
+            </span>
+            <span class="lv mono">2/5</span>
+        </div>
+        <div class="skill-row">
+            <span class="name">Docker</span>
+            <span class="meter" aria-hidden="true">
+                <i class="on"></i>
+                <i class="on"></i>
+                <i></i>
+                <i></i>
+                <i></i>
+            </span>
+            <span class="lv mono">2/5</span>
+        </div>
+        <div class="skill-row">
+            <span class="name">phpMyAdmin</span>
+            <span class="meter" aria-hidden="true">
+                <i class="on"></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+            </span>
+            <span class="lv mono">1/5</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <h3>その他</h3>
+        <div class="skill-row">
+            <span class="name">レスポンシブ対応</span>
+            <span class="meter" aria-hidden="true">
+                <i class="on"></i>
+                <i class="on"></i>
+                <i class="on"></i>
+                <i class="on"></i>
+                <i class="on"></i>
+            </span>
+            <span class="lv mono">5/5</span>
+        </div>
+        <div class="skill-row">
+            <span class="name">サーバー移行</span>
+            <span class="meter" aria-hidden="true">
+                <i class="on"></i>
+                <i class="on"></i>
+                <i class="on"></i>
+                <i></i>
+                <i></i>
+            </span>
+            <span class="lv mono">3/5</span>
+        </div>
+        <div class="skill-row">
+            <span class="name">ドメイン移管</span>
+            <span class="meter" aria-hidden="true">
+                <i class="on"></i>
+                <i class="on"></i>
+                <i class="on"></i>
+                <i></i>
+                <i></i>
+            </span>
+            <span class="lv mono">3/5</span>
+        </div>
+        <div class="skill-row">
+            <span class="name">バイブコーディング</span>
+            <span class="meter" aria-hidden="true">
+                <i class="on"></i>
+                <i class="on"></i>
+                <i class="on"></i>
+                <i class="on"></i>
+                <i></i>
+            </span>
+            <span class="lv mono">4/5</span>
+        </div>
+        <div class="skill-row">
+            <span class="name">Chatwork</span>
+            <span class="meter" aria-hidden="true">
+                <i class="on"></i>
+                <i class="on"></i>
+                <i class="on"></i>
+                <i class="on"></i>
+                <i class="on"></i>
+            </span>
+            <span class="lv mono">5/5</span>
+        </div>
+        <div class="skill-row">
+            <span class="name">Slack</span>
+            <span class="meter" aria-hidden="true">
+                <i class="on"></i>
+                <i class="on"></i>
+                <i></i>
+                <i></i>
+                <i></i>
+            </span>
+            <span class="lv mono">2/5</span>
+        </div>
+        <div class="skill-row">
+            <span class="name">KeePass</span>
+            <span class="meter" aria-hidden="true">
+                <i class="on"></i>
+                <i class="on"></i>
+                <i class="on"></i>
+                <i class="on"></i>
+                <i></i>
+            </span>
+            <span class="lv mono">4/5</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>ABOUT 〜私について〜</h2>
+      <span class="path mono">/about</span>
+    </div>
+    <div class="about-grid">
+      <div class="about-facts">
+        <dl>
+          <dt>名前</dt>
+          <dd>小田千尋</dd>
+          <dt>居住地</dt>
+          <dd>広島県</dd>
+          <dt>職業</dt>
+          <dd>Webコーダー</dd>
+        </dl>
+      </div>
+      <div class="about-body">
+        <p>【Profile / 略歴】</p>
+        <p>高知生まれの元転勤族。主に広島育ち。<br>
+            地方公務員→会葬礼状校正→インハウスのECサイト運営を経て、現在はWEB制作会社でコーダーをしています。<br>
+            犬と漫画とチョコレートが好き。</p>
+        <div class="aside-box">
+          以下は訓練校で制作したもの。だいぶ古くてアレですが、成長を見せるという意味でこっそり残します…
+          <ul>
+            <li><a href="portfolio/kenkodo/index.html">健康堂（架空サイト）</a></li>
+            <li><a href="portfolio/chukyu2/index.html">ジムサイト（架空サイト）</a></li>
+            <li><a href="https://pc-hana.com/49/team-c/">カバン店WEBサイト（コンペ提出サイト）</a></li>
+            <li><a href="portfolio/lovechoco/index.html">チョコレート専門店（架空サイト）</a></li>
+        </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 Oda Chihiro</footer>
+
 </body>
 </html>
