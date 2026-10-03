@@ -255,19 +255,8 @@ section:last-of-type {
     color: var(--ink);
 }
 
-.tag-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: auto;
-}
-
-.tag {
-    font-size: 0.76rem;
-    padding: 3px 9px;
-    border: 1px solid var(--line);
-    border-radius: 20px;
-    color: var(--muted);
+.work-card-txt {
+    font-size: 0.88rem;
 }
 
 .work-card.other {
@@ -319,7 +308,7 @@ section:last-of-type {
 }
 
 .legend-body {
-    padding: 4px 18px 16px;
+    padding: 4px 18px;
     border-top: 1px solid var(--line);
 }
 
